@@ -1,0 +1,12 @@
+.cup{
+    transition: opacity 1s;  opacity: 1;
+    @media #{$sm-layout} {
+        display: none;
+    }
+    @media #{$lg-layout} {
+        opacity: 0.5;
+    }
+    @media #{$md-layout} {
+        opacity: 0.25;
+    }
+}

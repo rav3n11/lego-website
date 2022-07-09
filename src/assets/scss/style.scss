@@ -1,0 +1,42 @@
+/**************************************
+    Default Styles
+***************************************/
+@import 'default/variables';//*
+@import 'default/mixins';//*
+@import 'default/reset';//*
+@import 'default/typography';//*
+@import 'default/extend';//*
+@import 'default/shortcode';//*
+@import 'default/spacing';//*
+
+
+
+/**************************************
+    Header Styles
+***************************************/
+
+@import 'header/header';
+
+
+/**************************************
+    Inner Styles
+***************************************/
+
+@import 'common/button';
+@import 'common/socialicon';
+@import 'common/footer';
+@import 'common/breadcrumb';
+
+
+//service
+@import 'elements/service';
+//tab
+@import 'elements/tab';
+//404
+@import 'elements/404';
+//about
+@import 'elements/about';
+//cup
+@import 'elements/cup';
+//circle
+@import 'elements/circle';

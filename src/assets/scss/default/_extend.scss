@@ -1,0 +1,48 @@
+%liststyle {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.liststyle {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+%transition {
+    -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
+    transition: all .3s cubic-bezier(.645,.045,.355,1);
+}
+
+%posrelative {
+    position: relative;
+}
+
+%bgImagePosition {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.theme-gradient {
+    background: linear-gradient(-259deg, $theme-color 0, #00a194 100%);
+}
+
+.theme-gradient {
+    background: linear-gradient(-259deg, $theme-color 0, #00a194 100%);
+}
+
+%theme-gradient {
+    background: linear-gradient(-259deg, $theme-color 0, #00a194 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
