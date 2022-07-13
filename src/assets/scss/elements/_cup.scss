@@ -10,3 +10,20 @@
         opacity: 0.25;
     }
 }
+.batman{
+    position: absolute;
+    right: 35vw;
+    top: 300px;
+    height: 700px;
+    width: 700px;
+    transition: opacity 1s;  opacity: 1;
+    @media #{$sm-layout} {
+        display: none;
+    }
+    @media #{$lg-layout} {
+        opacity: 0.5;
+    }
+    @media #{$md-layout} {
+        opacity: 0.25;
+    }
+}

@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import logo from "../../../assets/icons/single-bean.svg"
+import logo from "../../../assets/icons/lego.svg"
 import { SocialShare } from './config';
 import { Link } from 'react-router-dom';
 
@@ -40,7 +40,7 @@ export default function Header() {
                             <Link to={homeLink}>
                                 <img src={logo} id="logoResize" alt="single coffee bean"/>
                             </Link>
-                                <h2 className="title__header">Coffee Lessonz</h2>
+                                {/* <h2 className="title__header">Lego</h2> */}
                         </div>
                     </div>
                     <div className="header-right">

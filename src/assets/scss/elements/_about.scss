@@ -1,4 +1,5 @@
 .about-wrapper{
+    background-color: #fafafa;
     padding: 10% 10%;
     padding-top: 100px;
     @media #{$sm-layout} {
@@ -11,18 +12,77 @@
     @media #{$large-mobile} {
     }
 }
+.section-title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 .about-inner{
     padding-top: 5%;
 }
+.sub-title{
+    font-size: xx-large;
+    font-weight: bold;
+    color: yellow;
+    letter-spacing: 5px;
+    text-align: end;
+    margin-right: 50px;
+}
 .description{
-    font-size: x-large;
-    font-weight: lighter;
+    width: 300px;
+    font-size: small;
+    font-weight: bold;
+    color: white;
+    text-align: end;
+    margin-right: 50px;
+    align-self: flex-end;
     opacity: 0.7;
 }
-.about-area{
-    // background-color: $theme-color-light;
+.media-title{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    text-align: start;
+}
+.banner{
+    position: absolute;
+    left: 0;
+    top: 560px;
+    background-color: red;
+    color: white;
+    text-align: end;
+    opacity: 0.85;
+    width: 25vw;
+    padding: 20px;
+}
+.banner__text{
+    font-weight: bold;
+    color: white;
+    text-align: end;
+    
+}
+.about-socials{
+    position: absolute;
+    left: 200px;
+    top: 650px;
+}
+.yellow-lego{
+    height: 60px;
+    margin-right: 100px;
+    align-self: flex-end;
+}
+.yellow-lego__parent{
+    position: relative;
+}
+.yellow-lego-text{
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    font-size: 14px;
+    font-weight: 700;
 }
 .body-card{
+    background-color: white;
     margin-top: 10vh;
     overflow: hidden;
     width: 80vw;
@@ -58,8 +118,8 @@
         right: -30.5vw;
         .container{
             position: absolute;
-            top: 63vh;
-            left: -25vw;
+            top: 50vh;
+            left: 13vw;
         }
     }
 }
