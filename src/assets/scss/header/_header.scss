@@ -99,6 +99,17 @@
       z-index: 3;
       transition: margin 1s;
       background-color: red;
+      @media #{$sm-layout} {
+        margin-left: 0;
+        background-color: transparent;
+        width: 150px;
+        height: 150px;
+      }
+      @media #{$lg-layout} {
+      }
+      @media #{$md-layout} {
+        margin-left: 50px;
+      }
       .title__header{
         opacity: 0;
         font-size: x-large;
