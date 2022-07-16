@@ -88,14 +88,28 @@
 
     .logo {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      position: absolute;
+      justify-content: flex-end;
       align-items: baseline;
       gap: 30px;
-                
+      margin-left: 150px;
       padding: 5px 20px;
-      height: 30%;
+      height: 300px;
       z-index: 3;
+      transition: margin 1s;
       background-color: red;
+      @media #{$sm-layout} {
+        margin-left: 0;
+        background-color: transparent;
+        width: 150px;
+        height: 150px;
+      }
+      @media #{$lg-layout} {
+      }
+      @media #{$md-layout} {
+        margin-left: 50px;
+      }
       .title__header{
         opacity: 0;
         font-size: x-large;
@@ -279,6 +293,9 @@
         }
       }
       .logo {
+        height: 100px;
+        background-color: transparent;
+        margin: 0px;
         .title__header {
           transition: opacity 1s;
           opacity: 0.9;
@@ -334,6 +351,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  height: 100px;
   .header-btn {
     margin-left: 50px;
     @media #{$large-mobile} {

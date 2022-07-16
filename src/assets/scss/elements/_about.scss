@@ -1,65 +1,180 @@
-.about-wrapper{
-    padding: 10% 10%;
+.about-wrapper {
+  background-color: #fafafa;
+  padding: 10% 10%;
+  padding-top: 100px;
+  @media #{$sm-layout} {
+    padding: 0% 5%;
     padding-top: 100px;
-    @media #{$sm-layout} {
-        padding: 0% 5%;
-        padding-top: 100px;
-    }
-    @media #{$lg-layout} {
-        
-    }
-    @media #{$large-mobile} {
-    }
+  }
+  @media #{$lg-layout} {
+  }
+  @media #{$large-mobile} {
+  }
 }
-.about-inner{
-    padding-top: 5%;
+.section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-.description{
-    font-size: x-large;
-    font-weight: lighter;
-    opacity: 0.7;
+.about-inner {
+  padding-top: 5%;
 }
 .about-area{
-    // background-color: $theme-color-light;
+    padding-top: 0px !important;
 }
-.body-card{
-    margin-top: 10vh;
-    overflow: hidden;
-    width: 80vw;
-    height: 120vh;
-    --elevation: 16;
-    --epx: calc(var(--elevation) * 1px);
-  
-  --shadow1: 0 0 1px rgba(0, 0, 0, .1);
-  --shadow2: 0 1px 2px rgba(0, 0, 0, .08);
-  
+.sub-title {
+  font-size: xx-large;
+  font-weight: bold;
+  color: yellow;
+  letter-spacing: 5px;
+  text-align: end;
+  margin-right: 50px;
+}
+.title{
+    @media #{$sm-layout} {
+        color: black;
+        font-size: 76px;
+        margin-right: 90px;
+      }
+      @media #{$lg-layout} {
+        color: black;
+        font-size: 86px;
+        margin-right: 90px;
+      }
+      @media #{$md-layout} {
+        color: black;
+        font-size: 86px;
+        margin-right: 90px;
+      }
+}
+.description {
+  width: 300px;
+  font-size: small;
+  font-weight: bold;
+  color: white;
+  text-align: end;
+  margin-right: 50px;
+  align-self: flex-end;
+  opacity: 0.7;
+  @media #{$sm-layout} {
+    color: black;
+    text-align: center;
+  }
+  @media #{$lg-layout} {
+    color: black;
+    // text-align: end;
+  }
+  @media #{$md-layout} {
+    color: black;
+    
+  }
+}
+.media-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  text-align: start;
+}
+.banner {
+  position: absolute;
+  left: 0;
+  top: 560px;
+  background-color: red;
+  color: white;
+  text-align: end;
+  opacity: 0.85;
+  width: 25vw;
+  padding: 20px;
+}
+.banner__text {
+  font-weight: bold;
+  color: white;
+  text-align: end;
+}
+.about-socials {
+  position: absolute;
+  left: 200px;
+  top: 650px;
+}
+.yellow-lego {
+  height: 60px;
+  margin-right: 100px;
+  align-self: flex-end;
+}
+.yellow-lego__parent {
+  position: relative;
+}
+.yellow-lego-text {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.body-card {
+  background-color: white;
+  margin-top: 10vh;
+  overflow: hidden;
+  width: 80vw;
+  height: 120vh;
+  --elevation: 16;
+  --epx: calc(var(--elevation) * 1px);
+
+  --shadow1: 0 0 1px rgba(0, 0, 0, 0.1);
+  --shadow2: 0 1px 2px rgba(0, 0, 0, 0.08);
+
   --offset-y: calc(var(--epx) + 1px);
   --blur: calc(var(--epx) * 2);
-  --spread: calc(var(--epx) * .3);
-  --shadow3: 
-      0 var(--offset-y) 
-      var(--blur) 
-      var(--spread) 
-      rgba(0, 0, 0, 0.2);
-  
-  box-shadow: 
-    var(--shadow1),
-    var(--shadow2),
-    var(--shadow3);
-    .circle__blue{
-        z-index: 0;
-        position: relative;
-        background-color: #00a0e9;
-        height: 160vh;
-        width: 160vh;
-        border-radius: 90vh;
-        z-index: 0;
-        top: -43vh;
-        right: -30.5vw;
-        .container{
-            position: absolute;
-            top: 63vh;
-            left: -25vw;
-        }
+  --spread: calc(var(--epx) * 0.3);
+  --shadow3: 0 var(--offset-y) var(--blur) var(--spread) rgba(0, 0, 0, 0.2);
+
+  box-shadow: var(--shadow1), var(--shadow2), var(--shadow3);
+  .circle__blue {
+    z-index: 0;
+    position: relative;
+    background-color: #00a0e9;
+    height: 160vh;
+    width: 80vw;
+    border-radius: 90vh;
+    z-index: 0;
+    top: -43vh;
+    right: -29vw;
+    .container {
+      position: absolute;
+      top: 50vh;
+      transition: left 1s;
+      @media #{$sm-layout} {
+        left: -30vw;
+        top: 90vh;
+      }
+      @media #{$md-layout} {
+        left: -20vw;
+      }
+      @media screen and (min-width: 1400px) {
+        left: 13vw;
+      }
     }
+    @media #{$sm-layout} {
+      background-color: transparent;
+    }
+    @media #{$lg-layout} {        
+      background-color: transparent;
+    }
+    @media #{$md-layout} {
+      background-color: transparent;
+    }
+  }
+  @media #{$sm-layout} {
+    box-shadow: none;
+  }
+  @media #{$lg-layout} {
+    // box-shadow: none;
+  }
+  @media #{$md-layout} {
+    // box-shadow: none;
+  }
+}
+.about-overlay{
+  position: relative;
+  height: 350px;
 }

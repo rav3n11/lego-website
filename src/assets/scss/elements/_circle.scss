@@ -1,10 +1,21 @@
-.circle__blue{
-    background-color: #007ce9;
-    height: 160vh;
-    width: 160vh;
-    border-radius: 80vh;
-    z-index: 0;
-    position: absolute;
-    top: -20vh;
-    right: -20vw;
+.circle__blue {
+  background-color: #007ce9;
+  height: 160vh;
+  width: 80vw;
+  border-radius: 80vh;
+  z-index: 0;
+  position: absolute;
+  top: -20vh;
+  right: -20vw;
+  opacity: 1;
+  transition: background-color 1s;
+  @media #{$sm-layout} {
+    background-color: transparent;
+  }
+  @media #{$lg-layout} {    
+    background-color: transparent;
+  }
+  @media #{$md-layout} {
+    background-color: transparent;
+  }
 }
