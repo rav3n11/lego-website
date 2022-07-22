@@ -1,7 +1,7 @@
 import React from "react";
 import config from "./config";
 import HomeTabs from "../../tabs/Tabs";
-import ItemCard from "../../itemCard";
+import ItemCard from "../../ItemCard";
 import { Link } from "react-router-dom";
 // import Cup from '../../cup/Cup';
 import JSX_withParallax from "../../../util/ParallaxJSXWrapper";
@@ -16,11 +16,24 @@ import supes from "../../../assets/icons/lego-superman.svg";
 import loki from "../../../assets/icons/loki.svg";
 
 import HorizontalScroll from "react-scroll-horizontal";
+import MoreCard from "../../MoreCard";
+import { useState } from "react";
 export default function Body() {
   let title = config.title,
     description = config.description,
     subtitle = config.subtitle,
     socials = config.socials;
+
+  const [hoverid, setHoverid] = useState(0);
+
+  const setHover = (id) => {
+    console.log("setting", id);
+    setHoverid(id);
+  };
+  const resetHover = () => {
+    console.log("resetting");
+    setHoverid(0);
+  };
 
   const Batman = JSX_withParallax(
     <div className="batman">
@@ -87,43 +100,67 @@ export default function Body() {
           <div className="about-overlay">
             <Batman />
             <div className="horizontal-wrapper">
-              <HorizontalScroll reverseScroll={true}>
-                <div className="cards">
-                  <ItemCard
-                    title="Cpt. Deadpool"
-                    description="Merc with a mouth. This action figure is the only one knows about you. Some more lorem ipsum text here..."
-                    image={pool}
-                    color="red"
-                  />
-                  <ItemCard
-                    title="HULK"
-                    description="SMASH! By far the strongest avenger. Just don't let thor hear you say that. "
-                    image={hulk}
-                    color="green"
-                  />
-                  <ItemCard
-                    title="Spider Man"
-                    description="Something's tingling. Maybe its your sense of limitless adventure with this spiderman lego set."
-                    image={spidy}
-                    color="blue"
-                  />
-                  <ItemCard
-                    title="Loki"
-                    description="The God of mischeif. This set of the loki will make you feel like you're in a different universe. "
-                    image={loki}
-                    color="yellow"
-                  />
-                  <ItemCard
-                    title="Superman"
-                    description="Ready to win every game of top trumps ever. This leog set of the supes will surely accomplish that. "
-                    image={supes}
-                    img_size="small"
-                    color="red"
-                  />
-                </div>
-              </HorizontalScroll>
+              {/* <HorizontalScroll reverseScroll={true}> */}
+              <div className="cards">
+                <ItemCard
+                  title="Cpt. Deadpool"
+                  description="Merc with a mouth. This action figure is the only one knows about you. Some more lorem ipsum text here..."
+                  image={pool}
+                  color="red"
+                />
+                <ItemCard
+                  title="HULK"
+                  description="SMASH! By far the strongest avenger. Just don't let thor hear you say that. "
+                  image={hulk}
+                  color="green"
+                />
+                <ItemCard
+                  title="Spider Man"
+                  description="Something's tingling. Maybe its your sense of limitless adventure with this spiderman lego set."
+                  image={spidy}
+                  color="blue"
+                />
+                <ItemCard
+                  title="Loki"
+                  description="The God of mischeif. This set of the loki will make you feel like you're in a different universe. "
+                  image={loki}
+                  color="yellow"
+                />
+                <ItemCard
+                  title="Superman"
+                  description="Ready to win every game of top trumps ever. This leog set of the supes will surely accomplish that. "
+                  image={supes}
+                  img_size="small"
+                  color="red"
+                />
+              </div>
+              {/* </HorizontalScroll> */}
             </div>
           </div>
+        </div>
+
+        {/* <button onClick={resetHover} >button</button> */}
+        <div className="more-cards">
+          <MoreCard
+            hover={() => setHover(0)}
+            hoverEnd={resetHover}
+            title="More items"
+            description="Check out more sets from our collection. These sets are all made with lego bricks. Tons of lots of stuff. I have a thriving incubator. It is thriving. You're lucky I've let you leach off so much of my time. Check out more sets from our collection. These sets are all made with lego bricks. Tons of lots of stuff. I have a thriving incubator. It is thriving. You're lucky I've let you leach off so much of my time."
+            image={supes}
+            img_size="small"
+            color="red"
+            small_card={hoverid === 0}
+          />
+            <MoreCard
+              hover={() => setHover(1)}
+              hoverEnd={resetHover}
+              title="More items"
+              description="Check out more sets from our collection. These sets are all made with lego bricks. Tons of lots of stuff. I have a thriving incubator. It is thriving. You're lucky I've let you leach off so much of my time. Check out more sets from our collection. These sets are all made with lego bricks. Tons of lots of stuff. I have a thriving incubator. It is thriving. You're lucky I've let you leach off so much of my time."
+              image={supes}
+              img_size="small"
+              color="blue"
+              small_card={hoverid === 1}
+            />
         </div>
       </div>
     </div>

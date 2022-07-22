@@ -21,8 +21,8 @@ const HomePage = () => {
             <div className="active-light">
                 <Header />
                 <Body />
-                <SellingPoints />
-                <Footer />
+                {/* <SellingPoints /> */}
+                {/* <Footer /> */}
                 {/* Start Back To Top */}
                 {/* <div className="backto-top">
                     <ScrollToTop showUnder={20} duration={10}>

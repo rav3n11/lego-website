@@ -5,7 +5,7 @@ import React from "react";
 
 export default function ItemCard({title, description, image, img_size, color}) {
   return (
-    <div className="material-card">
+    <div className="material-card-ver">
       <div className={`top-section-colored ${color}`}>
         <div className={`top-card-image ${img_size && img_size}`}>
           <img src={image} alt="item" />
