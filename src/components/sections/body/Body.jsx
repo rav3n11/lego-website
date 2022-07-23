@@ -18,6 +18,7 @@ import loki from "../../../assets/icons/loki.svg";
 import HorizontalScroll from "react-scroll-horizontal";
 import MoreCard from "../../MoreCard";
 import { useState } from "react";
+import SectionHeader from "../../SectionHeader/SectionHeader";
 export default function Body() {
   let title = config.title,
     description = config.description,
@@ -95,6 +96,11 @@ export default function Body() {
                   </li>
                 ))}
               </ul>
+              <SectionHeader
+              color="red"
+              number="1"
+              title="New Characters"
+              />
             </div>
           </div>
           <div className="about-overlay">

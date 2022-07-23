@@ -1,10 +1,39 @@
 /*--------------------
 Footer Styles 
 ----------------------*/
-
-.footer-wrapper {
-    position: relative;
+.footer{
+    display: flex;
+    justify-content: center;
 }
+.footer-wrapper {
+    position: absolute;
+    top: 500vh;
+    overflow: hidden;
+    width: 85vw;
+    // height: 120vh;
+    --elevation: 16;
+    --epx: calc(var(--elevation) * 1px);
+  
+    --shadow1: 0 0 1px rgba(0, 0, 0, 0.1);
+    --shadow2: 0 1px 2px rgba(0, 0, 0, 0.08);
+  
+    --offset-y: calc(var(--epx) + 1px);
+    --blur: calc(var(--epx) * 2);
+    --spread: calc(var(--epx) * 0.3);
+    --shadow3: 0 var(--offset-y) var(--blur) var(--spread) rgba(0, 0, 0, 0.2);
+  
+    box-shadow: var(--shadow1), var(--shadow2), var(--shadow3);
+    @media #{$sm-layout} {
+      box-shadow: none;
+    }
+    @media #{$lg-layout} {
+      // box-shadow: none;
+    }
+    @media #{$md-layout} {
+      // box-shadow: none;
+    }
+}
+
 
 .footer-left {
     background: linear-gradient(145deg, #f81f01 0%, #ee076e 100%);
@@ -150,10 +179,20 @@ Footer Styles
     }
 }
 
+.footer-grey-section{
+    background-color: rgb(38, 38, 38);
+    height: 325px;
+}
+.footer-yellow-section{
+    background-color: #FFED00;
+    height: 225px;
+}
+
 /* Footer Style Two  */
 .footer-style-2 {    
-    background-color: $body-color !important;
-    margin-top: 5%;
+    width: 100%;
+    background-color: #000 !important;
+    // margin-top: 5%;
     padding: 20px;
     p {
         color: #c6c9d8;
@@ -161,8 +200,31 @@ Footer Styles
         opacity: 0.75;
     }
 }
-
-
+.yellow-jacket{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 100px;
+    padding: 40px 100px;
+}
+.troopers{
+    height: 50%;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    z-index: 0;
+}
+.trooper-1{
+    position: absolute;
+    /* opacity: 0.7; */
+    height: 160%;
+    right: -250px;
+    top: -70px;
+}
+.trooper-2{
+    // position: absolute;
+}
 .copyright-text {
     position: absolute;
     bottom: -114px;
@@ -183,4 +245,7 @@ Footer Styles
         font-size: 14px;
         opacity: 0.75;
     }
+}
+#footerLogo{    
+  height: 45px;
 }

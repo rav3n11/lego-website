@@ -265,17 +265,17 @@ Custom Row
 }
 
 .row--35 {
-    margin-left: -35px;
+    margin-left: 150px;
     margin-right: -35px;
 
     // Responsive
     @media #{$laptop-device} {
-        margin-left: -25px;
+        margin-left: 150px;
         margin-right: -25px;
     }
 
     @media #{$lg-layout} {
-        margin-left: -25px;
+        margin-left: 150px;
         margin-right: -25px;
     }
 

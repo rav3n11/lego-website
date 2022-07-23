@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import logo from "../../../assets/icons/lego.svg"
+import logo from "../../../assets/icons/lego-filled.svg"
 import { SocialShare } from './config';
 import { Link } from 'react-router-dom';
 

@@ -22,7 +22,7 @@ const HomePage = () => {
                 <Header />
                 <Body />
                 {/* <SellingPoints /> */}
-                {/* <Footer /> */}
+                <Footer />
                 {/* Start Back To Top */}
                 {/* <div className="backto-top">
                     <ScrollToTop showUnder={20} duration={10}>
