@@ -139,7 +139,7 @@ export default function Body() {
           </div>
         </div>
 
-        {/* <button onClick={resetHover} >button</button> */}
+        <div className="circle__red" />
         <div className="more-cards">
           <MoreCard
             hover={() => setHover(0)}
@@ -148,19 +148,24 @@ export default function Body() {
             description="Check out more sets from our collection. These sets are all made with lego bricks. Tons of lots of stuff. I have a thriving incubator. It is thriving. You're lucky I've let you leach off so much of my time. Check out more sets from our collection. These sets are all made with lego bricks. Tons of lots of stuff. I have a thriving incubator. It is thriving. You're lucky I've let you leach off so much of my time."
             image={supes}
             img_size="small"
-            color="red"
+            color="yellow"
             small_card={hoverid === 0}
           />
-            <MoreCard
-              hover={() => setHover(1)}
-              hoverEnd={resetHover}
-              title="More items"
-              description="Check out more sets from our collection. These sets are all made with lego bricks. Tons of lots of stuff. I have a thriving incubator. It is thriving. You're lucky I've let you leach off so much of my time. Check out more sets from our collection. These sets are all made with lego bricks. Tons of lots of stuff. I have a thriving incubator. It is thriving. You're lucky I've let you leach off so much of my time."
-              image={supes}
-              img_size="small"
-              color="blue"
-              small_card={hoverid === 1}
-            />
+          <MoreCard
+            hover={() => setHover(1)}
+            hoverEnd={resetHover}
+            title="More items"
+            description="Check out more sets from our collection. These sets are all made with lego bricks. Tons of lots of stuff. I have a thriving incubator. It is thriving. You're lucky I've let you leach off so much of my time. Check out more sets from our collection. These sets are all made with lego bricks. Tons of lots of stuff. I have a thriving incubator. It is thriving. You're lucky I've let you leach off so much of my time."
+            image={supes}
+            img_size="small"
+            color="blue"
+            small_card={hoverid === 1}
+          />
+        </div>
+
+        <div className="circle__green" />
+        <div className="black__wrapper">
+          <div className="circle__black" />
         </div>
       </div>
     </div>
